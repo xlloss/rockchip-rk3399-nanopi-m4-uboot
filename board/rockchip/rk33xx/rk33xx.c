@@ -509,7 +509,7 @@ int board_late_init(void)
 
 	setup_serial();
 	setup_macaddr();
-
+	__led_init(STATUS_LED_BIT, STATUS_LED_ON);
 	load_disk_partitions();
 
 #ifdef CONFIG_RK_PWM_REMOTE

@@ -203,7 +203,6 @@ void status_led_set  (int led, int state);
 # define STATUS_LED_BOOT	0		/* LED 0 used for boot status */
 
 #elif defined(CONFIG_MOTIONPRO)
-
 #define STATUS_LED_BIT		((vu_long *) MPC5XXX_GPT6_ENABLE)
 #define STATUS_LED_PERIOD	(CONFIG_SYS_HZ / 10)
 #define STATUS_LED_STATE	STATUS_LED_BLINKING
@@ -214,7 +213,17 @@ void status_led_set  (int led, int state);
 
 #define STATUS_LED_BOOT		0	/* LED 0 used for boot status */
 
+
 #elif defined(CONFIG_BOARD_SPECIFIC_LED)
+#define GPIO_A0 0
+#define GPIO_B5 13
+#define GPIO_GROUP_0 (0 << 8)
+#define GPIO_GROUP_1 (1 << 8)
+
+#define STATUS_LED_BIT (GPIO_GROUP_0 | GPIO_B5)
+#define STATUS_LED_STATE 0
+#define STATUS_LED_PERIOD 0
+
 /* led_id_t is unsigned long mask */
 typedef unsigned long led_id_t;
 

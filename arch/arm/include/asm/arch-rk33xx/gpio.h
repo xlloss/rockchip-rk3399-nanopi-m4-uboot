@@ -104,6 +104,11 @@ struct rk_gpio_bank {
 #define	GPIO_D6			30
 #define	GPIO_D7			31
 
+#define GPIO_GROUP_0 (0 << 8)
+#define GPIO_GROUP_1 (1 << 8)
+#define GPIO_GROUP_2 (2 << 8)
+#define GPIO_GROUP_3 (3 << 8)
+#define GPIO_GROUP_4 (4 << 8)
 
 /* gpio bank and pin get */
 #define RK_GPIO_BANK(gpio)		((gpio & RK_GPIO_BANK_MASK) >> RK_GPIO_BANK_OFFSET)

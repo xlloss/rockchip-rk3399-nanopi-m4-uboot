@@ -444,6 +444,10 @@
 
 #undef CONFIG_UBOOT_CHARGE
 
+#define CONFIG_STATUS_LED
+#define CONFIG_BOARD_SPECIFIC_LED
+#define CONFIG_CMD_LED
+
 #endif /* CONFIG_LCD */
 
 
